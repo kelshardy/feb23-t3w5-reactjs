@@ -1,41 +1,19 @@
-// let someFruit = [
-//   "mangoes",
-//   "peaches",
-//   "apples",
-//   "blueberries",
-//   "aubergine",
-//   "secret banana",
-//   "papayas",
-//   "banana",
-//   "durian",
-//   "tomatoes",
-//   "rambutan",
-//   "mulberries",
-//   "kiwis",
-//   "jackfruit",
-//   "watermelon",
-//   "zach fruit",
-//   "grape",
-//   "coconut",
-// ];
+import "./FruitList.css";
 
-// Process someFruit and build an array of li tags
-// let fruitList = someFruit.map(((fruit, index) => {
-//   return <li key={fruit} fancynumber={index}>{fruit}</li>;
-// }));
+import ListGroup from 'react-bootstrap/ListGroup';
 
 // Functions MUST return JSX, if you wanna use it in HTML
 // a.k.a. in place of inline JSX:
-export default function FruitList(props) {
+export default function FruitList(props){
   
   if (props.listToShow.includes("pineapple")){
     return null;
   }
   
   let listOfFruit = props.listToShow.map(fruit => {
-    return <li key={fruit}>
+    return <ListGroup.Item key={fruit}>
       {fruit}
-    </li>
+    </ListGroup.Item>
   });
 
   return <span>
